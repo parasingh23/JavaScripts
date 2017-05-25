@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <form onsubmit="return check()">
+            <div style="alignment-adjust:auto">
+            <label>Username</label>
+                <input type="text" id="username" />
+              
+           
+                
+                <label>Email</label>
+                <input type="text" id="email">
+          
+               
+                <label>Age</label>
+                <input type="text" id="age" >
+                
+                <input type ="submit" value="Submit" >
+            </div>  
+            <script>
+                function check(){
+                    
+                 var at=document.getElementById("email").value.indexOf("@");   
+                 var age=document.getElementById("age").value;   
+                 var fname=document.getElementById("username").value;   
+                    
+                    submitOk="true";
+                    
+                    if(fname.length>10){
+                        
+                       alert("Userame must not exceed 10 letters") ;
+                        submitOk="false";
+                    }
+                    
+                    if(isNaN(age) || age>100 || age<1)
+                    {
+                        
+                        
+                        alert("Age must be between 1 to 100");
+                        submitOk="false";
+                        
+                    }
+                    
+                    if(at == -1){
+                        
+                        alert("Invalid Email");
+                        submitOk="false";
+                    }
+                    
+                    if(submitOk==false){
+                        
+                        return false;
+                        
+                    }
+                    
+                
+                    
+                }
+                
+                
+                </script>
+              
+             
+            
+            
+            
+        </form>
+    </body>
+</html>
