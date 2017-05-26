@@ -17,11 +17,61 @@ and open the template in the editor.
             
            document.write("<br><h2>"+cars+"</h2></br>");
            
-        </script>
            
+           
+        </script>
     </head>
     
     <body>
        
+        <p id="demo2"></p>
+        <p id="demo3"></p>
+        <p id="demo4"></p>
+        <p id="demo5"></p>
+        <p id="demo6"></p>
+        <p id="demo7"></p>
+        <p id="demo8"></p>
+        <p id="demo9"></p>
+        
+        
+        <script>
+            
+            
+           var fruits=["Apple","Orange","Mango","WaterMelon","Grapes"]; 
+            document.getElementById("demo2").innerHTML=fruits.join(" "); //join arrays with value given in brackets
+            
+            fruits.pop();
+            document.getElementById("demo3").innerHTML=fruits; //remove last element from array
+            
+            
+            fruits.push("Kiwi");
+            document.getElementById("demo4").innerHTML=fruits; //add a element to the array
+            
+            
+            fruits.shift();
+            document.getElementById("demo5").innerHTML=fruits; //pop out the first element from array
+            
+            
+            fruits.unshift("Lemon");
+            document.getElementById("demo6").innerHTML=fruits; //push in the first element place
+            
+            
+            fruits.splice(2,0,"Papaya","Strawberry");
+            document.getElementById("demo7").innerHTML=fruits;
+            
+            
+            
+            //numbers sorting 
+            
+            var points=[20,40,10,30,5];
+            
+            
+          document.getElementById("demo8").innerHTML=points; 
+            points.sort(function(a, b){return a - b});
+            
+          document.getElementById("demo9").innerHTML=points;   
+        
+        </script>
     </body>
+           
 </html>

@@ -12,14 +12,20 @@ and open the template in the editor.
     </head>
     <body>
         <p id="demo"> </p>
+        <p id="demo1"> </p>
         <script>
             
-            var user={FirstName:"Paras",LastName:"Singh",eyecolor:"brown"};
+            var user={
+                FirstName:"Paras",
+                LastName:"Singh",
+                eyecolor:"brown",
+                Fullname:function(){return this.FirstName+" "+this.LastName;}
+            };
             
             
-            document.getElementById("demo").innerHTML = user ;
-            
-            
+            document.getElementById("demo").innerHTML = user.FirstName+" "+user.LastName+" <br></br>"+user["eyecolor"];
+           
+            document.getElementById("demo1").innerHTML=user.Fullname();
             
             </script>
     </body>
